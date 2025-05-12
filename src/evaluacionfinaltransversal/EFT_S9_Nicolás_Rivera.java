@@ -402,7 +402,7 @@ class Cliente {
 class Entrada {
     
     //Variables de clase o estatica
-    static String[] sectores = {"VIP        ", "Palco      ", "Platea baja", "Platea alta", "Galería    "};
+    static String[] sectores = {"VIP", "Palco", "Platea baja", "Platea alta", "Galería"};
     static int[] tarifas = {30000, 20000, 15000, 15000, 10000};
 
     //Variables de instancia
@@ -549,7 +549,7 @@ public class EFT_S9_Nicolás_Rivera {
             
             Pausar.pausa(4);    
             
-            if (teatroMoro.asientosDisponibles.size() > 0) {
+            if (teatroMoro.asientosDisponibles.size() > 0) { 
                 
                 teatroMoro.mostrarMenu(scanner);                
                 opcion = Validador.validarEntradaInt(scanner.nextInt(), 1, 8, scanner); // tener claro cuantos opciones tendra el menú
@@ -614,7 +614,7 @@ public class EFT_S9_Nicolás_Rivera {
                     teatroMoro.mostrarDescuentos();
                     break;
                 case 3:
-                    if (ventaProcesada) {
+                    if (ventaProcesada && teatroMoro.listaEntradasVendidas.size() > 0) {
                         teatroMoro.mostrarBoletaUltimaCompra(cantidadEntradas);
                     } else {
                         System.out.println("Aún no se realiza la compra");
